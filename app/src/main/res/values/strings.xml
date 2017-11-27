@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Kotlin</string>
+    <string name="button_text">Toast</string>
+    <string name="button_activity">Fragments</string>
+    <string name="Hello_World">Hello, World!</string>
+    <string name="change_fragment">Change Fragment</string>
+    <string name="toast_text">I\'m a toast.</string>
+    <string name="alerte">Alerte</string>
+</resources>

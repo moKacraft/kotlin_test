@@ -1,6 +1,9 @@
 package madeline.test_kotlin
 
 import android.content.Intent
+import android.location.Location
+import android.location.LocationListener
+import android.location.LocationManager
 import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -24,8 +27,8 @@ class MainActivity : AppCompatActivity() {
         val button2: Button = findViewById(R.id.button2)
 
         button2.setOnClickListener {
-            val randomIntent = Intent(this, SecondActivity::class.java)
-            startActivity(randomIntent)
+            val fragIntent = Intent(this, SecondActivity::class.java)
+            startActivity(fragIntent)
         }
 
         val button1: Button = findViewById(R.id.button1)
@@ -71,5 +74,12 @@ class MainActivity : AppCompatActivity() {
             val textView: TextView = findViewById(R.id.textView)
             textView.text = editText.text
         }
+
+        val button_geo: Button = findViewById(R.id.geo_button)
+
+        button_geo.setOnClickListener {
+//            val textView: TextView = findViewById(R.id.textView)
+//            textView.text =
+            }
+        }
     }
-}

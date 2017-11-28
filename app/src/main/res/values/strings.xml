@@ -5,6 +5,6 @@
     <string name="Hello_World">Hello, World!</string>
     <string name="change_fragment">Change Fragment</string>
     <string name="toast_text">I\'m a toast.</string>
-    <string name="alerte">Alerte</string>
+    <string name="alerte">Alert</string>
     <string name="change_text">change text</string>
 </resources>

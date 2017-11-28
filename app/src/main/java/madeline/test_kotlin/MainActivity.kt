@@ -5,6 +5,7 @@ import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.annotation.RequiresApi
+import android.support.v7.app.AlertDialog
 import android.widget.Button
 import android.widget.Toast
 import org.jetbrains.anko.*
@@ -30,6 +31,7 @@ class MainActivity : AppCompatActivity() {
         val button1: Button = findViewById(R.id.button1)
 
         button1.setOnClickListener {
+            // Anko async
             doAsync {
                 var result = LocalDateTime.now().toString()
                 uiThread {
@@ -49,6 +51,17 @@ class MainActivity : AppCompatActivity() {
                 yesButton { toast("Oh…") }
                 noButton {}
             }.show()
+            // Native Alert
+//            val simpleAlert = AlertDialog.Builder(this@MainActivity).create()
+//            simpleAlert.setTitle("Alert")
+//            simpleAlert.setMessage("Show simple Alert")
+//
+//            simpleAlert.setButton(AlertDialog.BUTTON_POSITIVE, "OK", {
+//                dialogInterface, i ->
+//                Toast.makeText(applicationContext, "You clicked on OK", Toast.LENGTH_SHORT).show()
+//            })
+//
+//            simpleAlert.show()
         }
 
         val button3: Button = findViewById(R.id.button3)

@@ -7,11 +7,11 @@ import android.os.Bundle
 import android.support.annotation.RequiresApi
 import android.widget.Button
 import android.widget.Toast
-import org.jetbrains.anko.alert
-import org.jetbrains.anko.doAsync
-import org.jetbrains.anko.toast
-import org.jetbrains.anko.uiThread
+import org.jetbrains.anko.*
 import java.time.LocalDateTime
+import android.widget.EditText
+import android.widget.TextView
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,33 +20,43 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val button1: Button = findViewById(R.id.button1)
-
-        button1.setOnClickListener {
-//            Toast.makeText(this@MainActivity, getString(R.string.toast_text), Toast.LENGTH_SHORT).show()
-            doAsync {
-                var result = LocalDateTime.now().toString()
-                uiThread {
-                    toast(result)
-                }
-            }
-        }
-
         val button2: Button = findViewById(R.id.button2)
 
         button2.setOnClickListener {
             val randomIntent = Intent(this, SecondActivity::class.java)
-
             startActivity(randomIntent)
+        }
+
+        val button1: Button = findViewById(R.id.button1)
+
+        button1.setOnClickListener {
+            doAsync {
+                var result = LocalDateTime.now().toString()
+                uiThread {
+                    // Anko toast
+                    toast(result)
+                    // Native toast
+                    // Toast.makeText(this@MainActivity, result, Toast.LENGTH_SHORT).show()
+                }
+            }
         }
 
         val button_alert: Button = findViewById(R.id.button_alert)
 
         button_alert.setOnClickListener {
+            // Anko alert
             alert("Hi, I'm Roy", "Have you tried turning it off and on again?") {
                 yesButton { toast("Oh…") }
                 noButton {}
             }.show()
+        }
+
+        val button3: Button = findViewById(R.id.button3)
+
+        button3.setOnClickListener {
+            val editText: EditText = findViewById(R.id.editText)
+            val textView: TextView = findViewById(R.id.textView)
+            textView.text = editText.text
         }
     }
 }

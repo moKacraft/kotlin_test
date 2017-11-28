@@ -7,4 +7,5 @@
     <string name="toast_text">I\'m a toast.</string>
     <string name="alerte">Alert</string>
     <string name="change_text">change text</string>
+    <string name="geolocation">Geolocation</string>
 </resources>

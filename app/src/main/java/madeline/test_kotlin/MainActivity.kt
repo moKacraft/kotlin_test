@@ -1,20 +1,18 @@
 package madeline.test_kotlin
 
 import android.content.Intent
-import android.location.Location
-import android.location.LocationListener
-import android.location.LocationManager
 import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.annotation.RequiresApi
-import android.support.v7.app.AlertDialog
 import android.widget.Button
-import android.widget.Toast
 import org.jetbrains.anko.*
 import java.time.LocalDateTime
 import android.widget.EditText
 import android.widget.TextView
+
+import android.support.v7.app.AlertDialog
+import android.widget.Toast
 
 
 class MainActivity : AppCompatActivity() {
@@ -78,8 +76,8 @@ class MainActivity : AppCompatActivity() {
         val button_geo: Button = findViewById(R.id.geo_button)
 
         button_geo.setOnClickListener {
-//            val textView: TextView = findViewById(R.id.textView)
-//            textView.text =
+            val textView: TextView = findViewById(R.id.textView)
+            textView.text = "Lat: " + "Lon: "
             }
         }
     }

@@ -11,9 +11,7 @@
         android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/button_activity" />
@@ -64,15 +62,6 @@
         android:layout_marginTop="8dp"
         android:text="@string/change_text"/>
 
-    <TextView
-        android:id="@+id/geo_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="TextView" />
-
     <Button
         android:id="@+id/geo_button"
         android:layout_width="match_parent"
@@ -80,6 +69,6 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Button" />
+        android:text="@string/geolocation" />
 
 </LinearLayout>

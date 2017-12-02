@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
         button1.setOnClickListener {
             // Anko async
             doAsync {
-                var result = LocalDateTime.now().toString()
+                val result = LocalDateTime.now().toString()
                 uiThread {
                     // Anko toast
                     toast(result)
@@ -44,9 +44,9 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        val button_alert: Button = findViewById(R.id.button_alert)
+        val buttonAlert: Button = findViewById(R.id.button_alert)
 
-        button_alert.setOnClickListener {
+        buttonAlert.setOnClickListener {
             // Anko alert
             alert("Hi, I'm Roy", "Have you tried turning it off and on again?") {
                 yesButton { toast("Oh…") }
@@ -73,9 +73,9 @@ class MainActivity : AppCompatActivity() {
             textView.text = editText.text
         }
 
-        val button_geo: Button = findViewById(R.id.geo_button)
+        val buttonGeo: Button = findViewById(R.id.geo_button)
 
-        button_geo.setOnClickListener {
+        buttonGeo.setOnClickListener {
             val textView: TextView = findViewById(R.id.textView)
             textView.text = "Lat: " + "Lon: "
             }

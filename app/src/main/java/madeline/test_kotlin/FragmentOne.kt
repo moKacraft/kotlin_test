@@ -26,9 +26,9 @@ class FragmentOne: Fragment() {
         super.onCreate(savedInstanceState)
     }
 
-    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         Log.d(TAG, "onCreateView")
-        return inflater!!.inflate(R.layout.fragment_one, container, false)
+        return inflater.inflate(R.layout.fragment_one, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

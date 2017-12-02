@@ -13,19 +13,19 @@ class SecondActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 
-        val Change = findViewById<Button>(R.id.btn_change)
-        ShowFragment(FragmentOne())
-        Change.setOnClickListener({
+        val change = findViewById<Button>(R.id.btn_change)
+        showFragment(FragmentOne())
+        change.setOnClickListener({
             isFragmentOneLoaded = if (isFragmentOneLoaded) {
-                ShowFragment(FragmentTwo())
+                showFragment(FragmentTwo())
                 false
             } else {
-                ShowFragment(FragmentOne())
+                showFragment(FragmentOne())
                 true
             }
         })
     }
-    private fun ShowFragment(frag: Fragment){
+    private fun showFragment(frag: Fragment){
         val manager = supportFragmentManager
         val transaction = manager.beginTransaction()
         transaction.replace(R.id.fragment_holder, frag)
